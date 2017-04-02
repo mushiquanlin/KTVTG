@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<video id="myaudio" autoplay="autoplay" preload="auto" width="100%" webkit-playsinline="webkit-playsinline">
+			<source src="launch_movie.webm" type="video/webm" />
+			<source src="launch_movie.mp4" type="video/mp4" />
+		</video>
+
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.plusReady(function(e) {
+				plus.navigator.closeSplashscreen(); //关闭splash页面；
+				//禁用滑动
+				document.addEventListener('touchmove', function() {
+					event.preventDefault();
+				}, false);
+				//设置监听
+				var webview = plus.webview.currentWebview();
+				mui.fire(webview, 'eventName', {});
+				//监听并播放
+				window.addEventListener('eventName', function(event) {
+					document.getElementById('myaudio').play();
+				});
+				//播放完毕打开心窗口
+				document.getElementById('myaudio').addEventListener('ended', function() {
+					mui.openWindow({
+						url: 'dea.html',
+						id: 'info',
+						show: {
+							aniShow: "fade-in", //页面显示动画，透明到不透明
+							duration: 400 //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						},
+						waiting: {
+							autoShow: false, //自动显示等待框，默认为true
+						}
+					});
+					plus.navigator.setFullscreen(false); //关闭全屏
+				});
+			});
+		</script>
+	</body>
+
+</html>

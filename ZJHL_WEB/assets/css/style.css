@@ -1,0 +1,183 @@
+body, div, ul, ol, h1, h2 {
+	margin: 0;
+	padding: 0
+}
+img {
+	border: 0
+}
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+a {
+	margin: 0;
+	outline: none;
+	padding: 0;
+	text-decoration: none
+}
+/*
++----------------------------------------------------------------+
+	Extras
++----------------------------------------------------------------+
+*/
+
+.cf:before, .cf:after {
+	content: " ";
+	display: table
+}
+.cf:after {
+	clear: both
+}
+.clear {
+	clear: both
+}
+/*
++----------------------------------------------------------------+
+	Definicoes Gerais
++----------------------------------------------------------------+
+*/
+
+/*body {
+	background-color: #2D2C30;
+	color: #eaeaea;
+	font: 62.5% Verdana, Geneva, sans-serif
+}*/
+h1 {
+	font: 3.8em 'OratorpraOi-TextTwo';
+	text-align: center;
+	margin-top: 150px;
+	margin-right: 0;
+	margin-bottom: 50px;
+	margin-left: 0;
+}
+/*
++----------------------------------------------------------------+
+	Slideshow
++----------------------------------------------------------------+
+*/
+
+.slider {
+	margin: 0 auto;
+	width: 100%;
+}
+.slider-container {
+	height: 530px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.slider-container .slider-wrapper {
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%; /*Fix for prevent display errors*/
+	-webkit-transition: all 800ms ease;
+	-moz-transition: all 800ms ease;
+	-o-transition: all 800ms ease;
+	transition: all 800ms ease;
+}
+.slider-container .slide {
+	float: left;
+	height: 530px;
+	overflow: hidden;
+	position: relative;
+	width:1868px;
+}
+.slider-nav {
+	text-align: center;
+	width: 100%;
+    margin-top:-50px;
+    position:relative;
+    z-index:9999;
+}
+.slider-nav li {
+	display: inline;
+	padding: 3px;
+}
+.slider-nav .bullet {
+	background-color: #d3d3d3;
+	border-radius: 50%;
+	display: inline-block;
+	text-indent: -9000px;
+	overflow: hidden;
+	height: 16px;
+	width:16px;
+}
+.slider-nav .active {
+	background-color: #939393;
+}
+.slider-nav .prev, .slider-nav .next {
+	background: url('img/sprite.png') no-repeat;
+	display: inline-block;
+	text-indent: -9000px;
+	overflow: hidden;
+	height: 16px;
+	width:16px ;
+}
+.slider-nav .next {
+	background-position: -15px top
+}
+
+/*IPHONE5*/
+@media screen and (max-width:320px) {
+    .slider-wrapper {
+         width:320px;
+    }
+    .slider-container .slide {
+        width:320px;
+    }
+    .slide {
+       width:320px;
+    }
+    .slide-img {
+       width:320px;
+    }
+}
+
+/*IPHONE6*/
+@media screen and (max-width:375px) {
+    .slider-wrapper {
+         width:375px;
+    }
+    .slider-container .slide {
+        width:375px;
+    }
+    .slide {
+       width:375px;
+    }
+    .slide-img {
+       width:375px;
+    }
+}
+ 
+/*IPHONE6P*/
+@media screen and (max-width:414px) {
+    .slider-wrapper {
+         width:414px;
+    }
+    .slider-container .slide {
+        width:414px;
+    }
+    .slide  {
+       width:414px;
+    }
+    .slide-img {
+       width:414px;
+    }
+}
+/*IPair*/
+@media screen and (max-width:768px) {
+    .slider-wrapper {
+         width:768px;
+    }
+    .slider-container .slide {
+        width:768px;
+    }
+    .slide  {
+       width:768px;
+    }
+}
+   

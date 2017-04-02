@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>添加客户信息</title>
+	<meta charset="utf-8" />
+    <style type="text/css">
+        .field {
+           margin-bottom:15px;
+        }
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        function addCustomer() {
+            var customer = {
+                "Name": $('#Name').val(),
+                "Phone": $('#Phone').val(),
+                "Sex": $('#Sex').val(),
+                "Address": $('#Address').val(),
+                "Area": $('#Area').val(),
+                "Remark": $('#Remark').val(),
+                "Company": $('#Company').val(),
+                "QQ": $('#QQ').val(),
+                "MailBox": $('#MailBox').val(),
+                "Contact": $('#Contact').val(),
+                "Password": $('#Password').val(),
+                "CompanyLogo": $('#CompanyLogo').val(),
+                "CompanyLogoMini": $('#CompanyLogoMini').val()
+            };
+            /*前端发送AJAX请求获取后台数据*/
+            $.ajax({
+                /*AJAX请求类型*/
+                type: 'POST',
+                /*要通过AJAX访问的地址*/
+                url: 'http://localhost:30021/data.aspx?action=AddCustomer' + '&customejson=' + JSON.stringify(customer),
+                /*AJAX访问后台成功,response为成功返回的数据*/
+                success: function (response) {
+                    if ( response === 'True' ) {
+                        alert('数据插入成功');
+                    } else {
+                        alert('数据插入失败！！！');
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="field">客户名称：<input id="Name" type="text" /></div>
+    <div class="field">手机号码：<input id="Phone" type="text" /></div>
+    <div class="field">性别：<input id="Sex" type="text" /></div>
+    <div class="field">地址：<input id="Address" type="text" /></div>
+    <div class="field">区域：<input id="Area" type="text" /></div>
+    <div class="field">备注：<input id="Remark" type="text" /></div>
+    <div class="field">公司：<input id="Company" type="text" /></div>
+    <div class="field">QQ：<input id="QQ" type="text" /></div>
+    <div class="field">邮箱：<input id="MailBox" type="text" /></div>
+    <div class="field">联系人：<input id="Contact" type="text" /></div>
+    <div class="field">密码：<input id="Password" type="text" /></div>
+    <div class="field">公司大图：<input id="CompanyLogo" type="text" /></div>
+    <div class="field">公司小图：<input id="CompanyLogoMini" type="text" /></div>
+    <div class="field"><input type="button" value="添加客户信息" onclick="addCustomer();" /></div>
+</body>
+</html>

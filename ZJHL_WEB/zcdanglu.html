@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="Robots" content="all" />
+    <meta name="Keywords" content="网站关键字" />
+    <meta name="Description" content="百度快照说明文字" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script type="text/javascript" src="script/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="script/jquery.customSelect.min.js"></script>
+
+</head>
+<body>
+    <div class="indexForm">
+        <form name="form1" method="post" action="Default_11.aspx" id="form1">
+            <div>
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMjQwMTYzNzQ5ZGQ=" />
+            </div>
+
+            <ul>
+                <li class="fixed"><img src="" /><span class="formspan">您的姓名</span><input type="text" class="formText" id="G_nmae" name="name" /></li>
+                <li class="fixed"><img src=" /><span class="formspan">手机号码</span><input type="text" class="formText" maxlength="11" name="mtel" id="G_mtel" /></li>
+                <li class="fixed mobcode"><img src="" /><span class="formspan">验 证 码</span><input type="text" class="formText" id="YanZheng" maxlength="6" /><input type="button" id="YanZhengMa" value="点击发送" style="margin-top:5px" class="subcode" /></li>
+                <li class="fixed">
+                    <img src="images/form3.png" />
+                    <select name="sheng" class="relselet">
+
+                        <option value="0">请选择省份</option>
+
+                        <option value=""></option>
+
+                        <option value="安徽">安徽</option>
+
+                        <option value="北京市">北京市</option>
+
+                        <option value="福建">福建</option>
+
+                        <option value="甘肃">甘肃</option>
+
+                        <option value="广东">广东</option>
+
+                        <option value="广西">广西</option>
+
+                        <option value="贵州">贵州</option>
+
+                        <option value="海南">海南</option>
+
+                        <option value="河北">河北</option>
+
+                        <option value="河南">河南</option>
+
+                        <option value="黑龙江">黑龙江</option>
+
+                        <option value="湖北">湖北</option>
+
+                        <option value="湖南">湖南</option>
+
+                        <option value="吉林">吉林</option>
+
+                        <option value="江苏">江苏</option>
+
+                        <option value="江西">江西</option>
+
+                        <option value="辽宁">辽宁</option>
+
+                        <option value="内蒙古">内蒙古</option>
+
+                        <option value="宁夏回族自治区">宁夏回族自治区</option>
+
+                        <option value="青海">青海</option>
+
+                        <option value="山东">山东</option>
+
+                        <option value="山西">山西</option>
+
+                        <option value="陕西">陕西</option>
+
+                        <option value="上海市">上海市</option>
+
+                        <option value="四川">四川</option>
+
+                        <option value="天津市">天津市</option>
+
+                        <option value="西藏">西藏</option>
+
+                        <option value="新疆">新疆</option>
+
+                        <option value="云南">云南</option>
+
+                        <option value="浙江">浙江</option>
+
+                        <option value="重庆">重庆</option>
+
+                    </select>
+                </li>
+                <li class="fixed">
+                    <img src="images/form3.png" />
+                    <select name="shi" class="relselet">
+                        <option value="0">选择城市</option>
+
+                        <option value=""></option>
+
+                        <option value="深圳">深圳</option>
+
+                        <option value="广州市">广州市</option>
+
+                        <option value="东莞市">东莞市</option>
+
+                        <option value="湛江市">湛江市</option>
+
+                        <option value="茂名市">茂名市</option>
+
+                        <option value="河源市">河源市</option>
+
+                        <option value="贵州">贵州</option>
+
+                        <option value="海南">海南</option>
+
+                        <option value="河北">河北</option>
+
+                        <option value="河南">河南</option>
+
+                        <option value="黑龙江">黑龙江</option>
+
+                        <option value="湖北">湖北</option>
+
+                        <option value="湖南">湖南</option>
+
+                        <option value="吉林">吉林</option>
+
+                        <option value="江苏">江苏</option>
+
+                        <option value="江西">江西</option>
+
+                        <option value="辽宁">辽宁</option>
+
+                        <option value="内蒙古">内蒙古</option>
+
+                        <option value="宁夏回族自治区">宁夏回族自治区</option>
+                    </select>
+                </li>
+                <li class="fixed">
+                    <img src="images/form3.png" />
+                    <select name="qu" class="relselet">
+                        <option value="0">选择址区</option>
+                    </select>
+                </li>
+                <li class="fixed">
+                    <img src="images/form6.png" />
+                    <select name="MD_name" class="relselet">
+                        <option value="0">请选择门店</option>
+                    </select>
+                </li>
+                <li class="nobor fixed"><input type="button" onclick="save_W_MenDian()" value="提交" class="submit" /></li>
+            </ul>
+            <script type="text/javascript">
+    $("select.relselet").customSelect();
+
+    var sIn_obj = null, save_mtel = "", YN_bool = true;
+    $("#YanZhengMa").click(function () {
+
+        save_mtel = $("#G_mtel").val();
+        if (YN_bool) {
+            YN_bool = false;
+            $("#YanZhengMa").val("请等待");
+            $.post("/wap/wacx/index.aspx", { typeW: "YanZhengMa", YanZheng: "q@c$", mtel: save_mtel },
+       function (data) {
+           YN_bool = true;
+           var JsonObj = jQuery.parseJSON(data);
+           if ($.trim(JsonObj["alert"].toString()) != "") {
+               alert(JsonObj["alert"]);
+               //$("#YanZhengShow").click();
+           }
+           if ($.trim(JsonObj["url"].toString()) != "") location = JsonObj["url"].toString();
+           if ($.trim(JsonObj["dengdaiTime"].toString()) != "") {
+               $("#YanZhengMa").attr({ "dengdaiTime": JsonObj["dengdaiTime"].toString() });
+               $("#YanZhengMa").val("请等待" + JsonObj["dengdaiTime"].toString() + "s");
+               if (sIn_obj != null) clearInterval(sIn_obj);
+               sIn_obj = setInterval(function () { jian_YanZhengMa_s() }, 1000);
+           }
+       });
+        }
+
+
+});
+
+function jian_YanZhengMa_s() {
+
+
+    var dengdaiTime = $("#YanZhengMa").attr("dengdaiTime");
+
+    dengdaiTime = parseInt(dengdaiTime) - 1;
+
+    if (parseInt(dengdaiTime) > 0) {
+
+        $("#YanZhengMa").attr({ "dengdaiTime": dengdaiTime });
+
+        $("#YanZhengMa").val("请等待" + dengdaiTime + "s");
+
+    } else {
+
+        $("#YanZhengMa").attr({ "dengdaiTime": "0" });
+
+        $("#YanZhengMa").val("重发验证码");
+
+        if (sIn_obj != null) clearInterval(sIn_obj);
+
+    }
+
+
+}
+
+function save_W_MenDian() {
+
+
+    var name = $("#G_nmae").val();
+
+    var mtel = $("#G_mtel").val();
+
+    var sheng = $("select[name=sheng]").val();
+
+    var shi = $("select[name=shi]").val();
+
+    var MD_name = $("select[name=MD_name]").val();
+
+    var qu = $("select[name=qu]").val();
+
+    if ($.trim(name) == "") {
+
+        alert("输入正确姓名");
+
+        return;
+
+    }
+
+    if ($.trim(save_mtel) == "") {
+
+        alert("输入正确电话");
+
+        return;
+
+    }
+
+    if ($.trim(sheng) == "0") {
+
+        alert("请选择省份");
+
+        return;
+
+    }
+
+    if ($.trim(shi) == "0") {
+
+        alert("请选择城市");
+
+        return;
+
+    }
+
+    if ($.trim(MD_name) == "0") {
+
+        alert("请选择门店");
+
+        return;
+
+    }
+
+    if ($.trim(qu) == "0") {
+
+        alert("请选择地区");
+
+        return;
+
+    }
+
+
+    // $("#a1").html("/wap/wacx/index.aspx" + jQuery.param({ typeW: "save_W_MenDian", name: name, mtel: save_mtel, sheng: sheng, shi: shi, MD_name: MD_name, YanZheng: $("#YanZheng").val(), qu: qu }));
+
+
+    $.post("/wap/wacx/index.aspx", { typeW: "save_W_MenDian", name: name, mtel: save_mtel, sheng: sheng, shi: shi, MD_name: MD_name, YanZheng: $("#YanZheng").val(), qu: qu },
+       function (data) {
+           var JsonObj = jQuery.parseJSON(data);
+           if ($.trim(JsonObj["alert"].toString()) != "") alert(JsonObj["alert"]);
+           if ($.trim(JsonObj["url"].toString()) != "") location = JsonObj["url"].toString();
+       });
+
+
+}
+
+
+$("select[name=sheng]").change(function () {
+
+    $.post("/wap/wacx/index.aspx", { typeW: "index_sheng", value: $(this).val() },
+       function (data) {
+           $("select[name=shi]").html(data);
+       });
+
+});
+
+$(document).on("change", "select[name=shi]", function () {
+
+    $.post("/wap/wacx/index.aspx", { typeW: "index_shi", value: $(this).val() },
+       function (data) {
+           $("select[name=qu]").html(data);
+       });
+
+});
+
+
+$(document).on("change", "select[name=qu]", function () {
+
+    $.post("/wap/wacx/index.aspx", { typeW: "index_qu", value: $(this).val() },
+       function (data) {
+           $("select[name=MD_name]").html(data);
+       });
+
+});
+
+
+$("select[name=sheng]").change();
+
+            </script>
+        </form>
+    </div>
+</body>
+</html>

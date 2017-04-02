@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="ZJHL_KTVTG.Pages.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="广告,招牌,灯箱,喷画,内外各种字,企业形象设计,标志设计及申报注册,室内,室外,规划,园林,设计出图,维护及工程施工,装修,水电,灯饰,电焊,防水,补漏,门窗,高空作业,楼梯扶手及护栏,浩奇防水系列产品及防水工程施工,湛江市浩联文化传播有限公司" />
+    <meta name="description" content="湛江市浩联文化传播有限公司于2015年2月6日在湛江工商局登记注册，业务经理是赵浩，我公司的办公地址位于粤西和北部湾经济圈的经济中心湛江，湛江市赤坎区椹川大道24号之一（棉织厂对面）402室，我们有最好的产品和专业的销售和技术团队，公司发展迅速，我们为客户提供最好的产品、良好的技术支持、健全的售后服务，湛江市浩联文化传播有限公司是湛江文化艺术业行业知名企业，如果您对我公司的产品服务有兴趣，请在线留言或者来电咨询。" />
+    <title>登陆系统</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script type="text/javascript"  src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="../css/main.css" rel="stylesheet" />
+    <script type="text/javascript"  src="../js/index.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

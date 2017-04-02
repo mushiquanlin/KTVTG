@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <title>会员注册</title>
+    </head>
+
+    <body>
+        <table cellspacing="0" cellpadding="0">
+            <tr>
+                <td height="60" valign="top" align="middle"><div align="center">会员注册</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellspacing="10" cellpadding="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="80">?</td>
+                                <td width="140">1、手机注册</td>
+                                <td width="120">?</td>
+                                <td><a href="reg_s3.asp">2、邮箱注册</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="60">
+                    <table cellspacing="4" cellpadding="0" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <td width="120">用 户 名：</td>
+                                <td width="150"><input id="membername" maxlength="16" type="text" name="membername" jquery1102041839085087209293="9" /></td>
+                                <td><span id="membername_t">*</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="60">
+                    <table cellspacing="4" cellpadding="0" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <td width="120">设置密码：</td>
+                                <td width="150"><input id="memberpass" value="" maxlength="16" type="password" name="memberpass" jquery1102041839085087209293="11" /></td>
+                                <td><span id="memberpass_t">由4－16个英文字母、数字、下划线（_）、点（.）组成</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="60">
+                    <table cellspacing="4" cellpadding="0" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <td width="120">确认密码：</td>
+                                <td width="150"><input id="memberpass2" value="" maxlength="16" type="password" name="memberpass2" jquery1102041839085087209293="13" /></td>
+                                <td><span id="memberpass2_t">*</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="60">
+                    <table cellspacing="4" cellpadding="0" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <td width="118">验证码：</td>
+                                <td width="440">
+                                    <input id="CheckNum" maxlength="5" size="8" type="text" name="CheckNum" jquery1102041839085087209293="6" />
+                                    <img id="img02" onclick="chagenum()" align="absmiddle" src="http://yzm3.100ye.com/validetccode.aspx?t=u&amp;s=997706470&amp;s1=1440228825758" width="115" height="55" /> ?<a id="checkhref" href="javascript:chagenum('t')">图片看不清?换一张!</a>?? <span id="msgyzm"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <!--<tr>              <td height="50" valign="bottom"><table width="100%" align="center" cellpadding="0" cellspacing="4">                <tr>                  <td width="120" class="h1 red">手机号码：</td>                  <td width="120"><input name="mobile" type="text" class="cellphone" id="mobile" value="" maxlength="11" /></td>                  <td><span id="mobile_t">为了您的帐户安全，请正确填写您的手机号码</span></td>                </tr>              </table></td>            </tr>            <tr>              <td height="60"><table width="100%" align="center" cellpadding="0" cellspacing="4">                <tr>                  <td width="120" class="h1 red">验 证 码：</td>                  <td width="80"><input name="checkwork" type="text" class="cellphone2" id="checkwork" value="" maxlength="6" title="" /></td>                  <td><input type="button" id="hqyzm" value="获取验证码" /><span id="hqyzm_t"></span></td>                </tr>              </table></td>            </tr>-->
+            <tr>
+                <td height="50">
+                    <table cellspacing="0" cellpadding="0" width="520" align="center">
+                        <tbody>
+                            <tr>
+                                <td>我已阅读并接受注册协议</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="140" valign="center" align="middle">
+                    <div>
+                        <div align="center">
+                            <input id="isreg" role="button" value="注 册" type="button" name="isreg" jquery1102041839085087209293="15" />
+                        </div>
+                    </div>
+                    <div align="center">
+                        <!--<table width="320" align="center" cellpadding="0" cellspacing="0" class="blankB">                <tr>                  <td width="20"><img src="/images/login_5/lostpassword_21.jpg" width="20" height="67" /></td>                  <td align="center" class="bg"></td>                  <td width="14"><img src="/images/login_5/lostpassword_23.jpg" width="14" height="67" /></td>                </tr>              </table>-->
+                        <input name="hidden" type="hidden" id="mobile_c" value="0" />
+                        <input name="hidden" type="hidden" id="checkwork_c" value="0" />
+                        <input name="hidden" type="hidden" id="membername_c" value="0" />
+                        <input name="hidden" type="hidden" id="memberpass_c" value="0" />
+                        <input name="hidden" type="hidden" id="memberpass2_c" value="0" />
+                        <input id="ywcode" type="hidden" name="ywcode" />
+                        <input id="checkid" value="997706470" type="hidden" name="checkid" />
+                        <input id="checknumb" type="hidden" name="checknumb" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td height="40" valign="bottom">
+                    <div align="center">
+                        <table cellspacing="0" cellpadding="0" width="400" align="center">
+                            <tbody>
+                                <tr>
+                                    <td align="middle"><div align="center">已有账号，立即登录</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+   
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "index.aspx": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "launch_movie.mp4",
+      "Free-Converter.com-launch_movie-39015856.mp4",
+      "launch_movie.webm"
+    ]
+  }
+}

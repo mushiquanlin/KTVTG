@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>旅游 酒店 婚庆 出国</title>
+    <meta charset="utf-8" />
+    <link href="js/pagination.css" rel="stylesheet" />
+    <style type="text/css">
+        ul, li {
+            list-style: none;
+        }
+
+        #wrapper {
+            width: 900px;
+            margin: 20px auto;
+        }
+
+        .data-container {
+            margin-top: 5px;
+        }
+
+            .data-container ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            .data-container li {
+                margin-bottom: 5px;
+                padding: 5px 10px;
+                background: #eee;
+                color: #666;
+            }
+    </style>
+
+</head>
+<body>
+    <div id="Pagination">
+
+    </div>
+
+   
+    <div id="wrapper">
+        <section>
+            <div class="data-container"></div>
+            <div id="pagination-demo1"></div>
+        </section>
+    </div>
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/pagination.min.js"></script>
+<script>
+    var container;
+    var pgsize = 10;
+    $(function () {
+        //创建数据分页
+        function createPage(name) {
+            //声明容器ID
+            container = $('#pagination-' + name);
+           
+            var sources = function () {
+                var result = [];
+
+                for (var i = 1; i < 300; i++) {
+                    result.push(i);
+                }
+
+                return result;
+            }();
+            var options = {
+                //指定分页数据源
+                dataSource: sources,
+                pageSize: pgsize,
+                //指定分页回调函数
+                callback: function (response, pagination) {
+                    console.log(response);
+                    
+                }
+            };
+
+            //$.pagination(container, options);
+
+            container.addHook('beforeInit', function () {
+                //alert('正在初始化');
+            });
+            //初始分页控件
+            container.pagination(options);
+            //添加分页控件事件
+            container.addHook('beforePageOnClick', function (evn,num) {
+                //alert(num);
+            });
+            container.addHook('afterPageOnClick', function (env, num) {
+                getData(num);
+                
+            });
+            //返回生成的容器页面
+            return container;
+        }
+
+        //创建容器页面
+        createPage('demo1');
+        getData(1);
+    });
+ 
+    function createItem(data) {
+        var item =
+               '<div>' +
+               '<div style="float:left;width:20%;height:160px;"> <img src="'+ data.CompanyLogo +'" style="width:220px;height:160px;" /></div>' +
+               '<div style="width:80%;height:160px;margin-left:240px;"><img class="sign" height="16" src="' + data.CompanyLogoMini + '" style="vertical-align: text-bottom" width="79" />' +
+               '<a href="http://8815.me668.net/index.php/fabu/8815/680/cn/680/674.html" target="_blank"><font color="red"><b>'+ data.Company +'</b></font></a>' +
+               '<br />' +
+               '<a href="http://8815.me668.net/index.php/fabu/8815/680/cn/680/674.html" target="_blank"><font color="#000">'+ data.Remark +'</font></a>' +
+               '<br />' +
+               '联系：'+ data.Contact +' &nbsp;<a href="http://wpa.qq.com/msgrd?v=3&amp;uin='+ data.QQ +'&amp;site=qq&amp;menu=yes" target="_blank"><img alt="点击这里给我发消息" border="0" src="http://wpa.qq.com/pa?p=2:3120266993:51" style="vertical-align: text-bottom" /></a> &nbsp;&nbsp;<br />' +
+               '电话：<strong><font size="3"><font color="#04049c"><span class="phone">'+ data.Phone +' </span></font></font></strong><br />' +
+               '地址：'+ data.Address +'</div>' +
+               '</div>';
+        return item;
+    }
+    function getData(num) {
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:30021/data.aspx?action=GetCustomer&number=' + num + '&pgsize=' + pgsize,
+            success: function (response) {
+                //声明分页无序列表
+                var dataHtml = '<ul>';
+                var data = eval(response);
+                //动态生成无序列表
+                $.each(data, function (index, item) {
+                    dataHtml += '<li style="height:180px;">' +
+                        createItem(item);
+                        + '</li>';
+                });
+                //无序列表结束
+                dataHtml += '</ul>';
+                //在分页控件前面添加生成的无序列表
+                container.prev().html("");
+                container.prev().html(dataHtml);
+            }
+        });
+    }
+
+    </script>
+   
+                      
+</body>
+</html>
