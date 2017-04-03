@@ -194,6 +194,14 @@ namespace ZJHL_KTVTG
                 var where = Request.Params["where"];
                 GetUsers(number, pgsize,where);
             }
+
+             if (Request.Params["action"] == "GetPermission")
+            {
+                var number = int.Parse(Request.Params["number"]);
+                var pgsize = int.Parse(Request.Params["pgsize"]);
+                var where = Request.Params["where"];
+                GetPermission(number, pgsize,where);
+            }
         }
 
         private void DeleteUsersByIdList(string ids)
@@ -370,6 +378,21 @@ namespace ZJHL_KTVTG
         {
             //获取系统用户列表
             var result = HaoLianDAL.SqlDAL.GetUsers(number, pgsize,where);
+            //将返回的数据写到浏览器
+            Response.Clear();
+            Response.Write(result);
+            Response.End();
+        }
+
+        /// <summary>
+        /// 获取系统权限列表
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="pgsize"></param>
+        protected void GetPermission(int number, int pgsize,string where)
+        {
+            //获取系统权限列表
+            var result = HaoLianDAL.SqlDAL.GetPermission(number, pgsize,where);
             //将返回的数据写到浏览器
             Response.Clear();
             Response.Write(result);

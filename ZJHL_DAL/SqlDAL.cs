@@ -682,5 +682,40 @@ namespace HaoLianDAL
             }
             return result;
         }
+
+         /// <summary>
+        /// 读取系统权限列表
+        /// </summary>
+        /// <param name="number">当前页码</param>
+        /// <param name="pgsize">当前页的数据条数</param>
+        /// <returns></returns>
+        public static string GetPermission(int number, int pgsize,string where)
+        {
+            string result = "";
+            //实例化数据库连接对象
+            SqlConnection connect = new SqlConnection(connetStr);
+            //打开数据连接
+            connect.Open();
+            if (connect.State != System.Data.ConnectionState.Open)
+            {
+                Console.WriteLine("打开数据库失败");
+            }
+            else
+            {
+                //声明SQL语句 
+                string cmdtext = $"SELECT * FROM dbo.ZJHL_Permission {where}";
+                //实例化SQL命令执行对象，输入SQL语句(cmdtext)和数据库连接对象(connect)
+                SqlCommand cmd = new SqlCommand(cmdtext, connect);
+                //数据适配器
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                //数据集
+                DataSet ds = new DataSet();
+                //通过数据适配器填充数据集
+                da.Fill(ds);
+                //返回JSON字符串
+                result = JsonUnit.DataTableToJson(ds.Tables[0]);
+            }
+            return result;
+        }
     }
 }
