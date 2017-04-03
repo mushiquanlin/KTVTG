@@ -795,6 +795,10 @@
     <Content Include="assets\img\p1.jpg" />
     <Content Include="assets\ppj1.jpg" />
     <Content Include="assets\ppj2.jpg" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\ZJHL_DAL.dll" />
+    <Content Include="bin\ZJHL_KTVTG.dll" />
     <Content Include="bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
     <Content Include="bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
     <Content Include="bootstrap-3.3.7-dist\css\bootstrap.css" />
@@ -1802,7 +1806,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\upload\" />
-    <Folder Include="bin\" />
     <Folder Include="unpackage\release\" />
     <Folder Include="unpackage\res\icons\" />
   </ItemGroup>
